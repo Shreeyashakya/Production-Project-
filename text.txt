@@ -1,0 +1,13 @@
+    <br />
+
+    <div class="col-md-4 text-center aos-init aos-animate">
+      <h4>Transciption</h4>
+      <p>{{ transcription }}</p>
+    </div>
+
+    <br />
+
+    <div class="col-md-4 text-center aos-init aos-animate">
+      <h4>Summary</h4>
+      <p>{{ summary }}</p>
+    </div>

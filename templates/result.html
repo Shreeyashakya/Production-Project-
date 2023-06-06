@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+  <head>
+    <title>Voice 2 Summary</title>
+    <meta name="description" content="Voice to Text and Text Summarization" />
+    <link
+      rel="icon"
+      href="static/img/Voice2SummaryLogo.png"
+      
+    />
+    <!-- custom.css -->
+    <link rel="stylesheet" href="static/custom.css" />
+    <!-- bootstrap.min.css -->
+    <link rel="stylesheet" href="static/bootstrap.min.css" />
+
+
+  <body>
+    <!-- banner -->
+    <div
+      class="jumbotron jumbotron-fluid"
+      id="banner"
+      style="background-image: url(static/img/webspeechblackbg.jpg)"
+    >
+      <div class="container text-center text-md-left">
+        <header>
+          <div class="row justify-content-between">
+            <div class="col-2">
+              <img src="static/img/Voice2SummaryLogo.png" alt="logo" />
+            </div>
+            <div class="col-6 align-self-center text-right">
+              <a href="#how-to-use" class="text-white lead">How to use</a>
+            </div>
+          </div>
+        </header>
+        <h1
+          class="display-3 text-white font-weight-bold my-5"
+        >
+          Voice 2 Summary<br />
+          Speech Recognition and Text Summarization
+        </h1>
+        <p
+          class="lead text-white my-4"
+        >
+          Voice 2 Summary is a Speech Recognition and Text Summarization
+          technology
+          <br />allows automatic conversion of voice input into written text and
+          further condensing that <br />
+          text into a concise summary.
+        </p>
+        <a
+          href="#transcribe-section"
+          class="btn my-4 font-weight-bold atlas-cta cta-green"
+          >Get Started</a
+        >
+      </div>
+    </div>
+    <!-- section-->
+    <br />
+    <div id= "transcribe-section" class="upload-container">
+      <!-- <div id="drag-drop-area" class="drag-drop-area">
+        <div class="drag-drop-text">
+          <p>Drag and drop files here</p>
+        </div>
+        <input type="file" id="file-input" class="file-input" multiple />
+      </div> -->
+      <form action="/transcribe" method="post" enctype="multipart/form-data">
+        <h2>Transcribe Audio File</h2>
+        <input type="file" name="audio_file" />
+        <!-- <label for="file-input" class="browse-button">Browse Files</label> -->
+        <br />
+        <input class="browse-button" type="submit" value="Transcribe" />
+      </form>
+      <!--Mic-->
+      <form action="/transcribe" method="post">
+        <h2>Real-time Speech Transcription</h2>
+        <input
+          class="browse-button"
+          type="submit"
+          name="realtime"
+          value="Start Transcription"
+        />
+      </form>
+    </div>
+    <br />
+
+    <div class="trans">
+      <h4>Transciption</h4>
+      <p>{{ transcript }}</p>
+    </div>
+
+    <br />
+
+    <div class="trans">
+      <h4>Summary</h4>
+      <p>{{ summary }}</p>
+    </div>
+
+    <!-- How to use -->
+    <div id= "how-to-use" class="container my-5 py-2">
+      <h2 class="text-center font-weight-bold my-5">How it works</h2>
+      <div class="row">
+        <div
+          class="col-md-4 text-center"
+        >
+          <img
+            src="static/img/upload.jpg"
+            alt="Upload file"
+            class="Upload files"
+          />
+          <h4>Upload Wav- file</h4>
+          <p>Choose your Wav file in Transcribe Audio File Section</p>
+        </div>
+        <div
+          class="col-md-4 text-center"
+        >
+          <img
+            src="static/img/summarizes.jpg"
+            alt="Convert audio to text"
+            class="convert wav to text"
+          />
+          <h4>Wav to Transcribe and Summary</h4>
+          <p>Converts Wav file to text in transcribe section and text summarization in Summary section</p>
+        </div>
+        <div
+          class="col-md-4 text-center"
+        >
+          <img
+            src="static/img/mic.jpg"
+            alt="Real time speech Recognition"
+            class="real time"
+          />
+          <h4>Real time Voice Recognition</h4>
+          <p>Converts your spoken words to text in transcribe section and text summarization in Summary section</p>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- copyright -->
+    <div class="jumbotron jumbotron-fluid" id="copyright">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div
+            class="col-md-6 text-white align-self-center text-center text-md-left my-2"
+          >
+            Copyright © 2023 Shreeya Shakya, Voice 2 Summary.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </body>
+</html>
